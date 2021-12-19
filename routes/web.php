@@ -14,3 +14,34 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+    Route::get('seanews/create', 'Admin\SeanewsController@add');
+    Route::post('seanews/create', 'Admin\SeanewsController@create');
+    Route::get('seanews', 'Admin\SeanewsController@index');
+    Route::get('seanews/edit', 'Admin\SeanewsController@edit');
+    Route::post('seanews/edit', 'Admin\SeanewsController@update');
+    Route::get('seanews/delete', 'Admin\SeanewsController@delete');
+});
+
+
+    Route::get('/', 'SeanewsController@index');
+
+
+
+
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
