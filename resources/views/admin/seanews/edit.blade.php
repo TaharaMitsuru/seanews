@@ -24,7 +24,7 @@
                    <div class="form-group row">
                        <label class="col-md-2" for="body">本文</label>
                        <div class="col-md-10">
-                           <textarea class="form-control" name="body" rows="20">{{ $seanews_form->body }}</textarea>
+                           <textarea class="form-control" name="body" rows="15">{{ $seanews_form->body }}</textarea>
                         </div>
                     </div> 
                     
@@ -32,7 +32,7 @@
                         <label class="col-md-2" for="image">画像</label>
                         <div class="col-md-10">
                             <input type="file" class="form-control-file" name="image">
-                            <div class="form-text text-info">
+                            <div class="form-text text-black">
                                設定中: {{ $seanews_form->image_path }}
                         </div>
                     
@@ -54,12 +54,12 @@
                </form>
                {{-- 以下を追記 --}}
                <div class="row mt-5">
-                   <div class="col-md-4 mx-auto">
+                   <div class="col-md-4 mx-auto text-white">
                        <h2>編集履歴</h2>
                        <ul class="list-group">
                            @if ($seanews_form->histories != NULL)
                                @foreach ($seanews_form->histories as $history)
-                                    <li class="list-group-item">{{ $history->edited_at }}</li>
+                                    <li class="list-group-item bg-info">{{ $history->edited_at }}</li>
                                @endforeach
                            @endif       
                        </ul>

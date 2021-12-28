@@ -13,8 +13,9 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        
     }
+    
 
     /**
      * Show the application dashboard.
@@ -25,4 +26,17 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    
+    public function beachcombing()
+    {
+        return view ('beachcombing');
+    }
+    
+     public function shoreplay()
+    {
+        return view ('shoreplay');
+        
+    }
+ 
+    
 }

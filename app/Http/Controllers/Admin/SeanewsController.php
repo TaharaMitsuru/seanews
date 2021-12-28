@@ -104,4 +104,9 @@ class SeanewsController extends Controller
      $seanews->delete();
      return redirect('admin/seanews/');
  }
+ 
+ public function comment(Request $request)
+ {
+     
+ }
 }

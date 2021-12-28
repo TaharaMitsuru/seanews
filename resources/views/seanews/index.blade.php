@@ -1,7 +1,38 @@
 @extends('layouts.front')
 
 @section('content')
-   <div class="container">
+    <div class="container">
+        <link rel="stylesheet" href="{{ asset('public/css/front.css') }}">
+            <div class="row">
+                <div class="col-md-10 mx-auto">
+                    <br>
+                    <br>
+                      <strong><h4>～MENU～</h4></strong>
+                </div>
+               
+                <ul class="list-group list-group-flush w-75 p-3">
+                   
+                   <strong>
+                    <a class="nav-link text-body border-bottom w-50" href="{{ route('Newindex') }}">●掲示板</a>
+                    <a class="nav-link text-body border-bottom w-50" href="{{ route('Newseanews') }}">●投稿フォーム</a>
+                    <a class="nav-link text-body border-bottom w-50" href="{{ route('shoreplay') }}">●磯遊びコラム</a>
+                    <a class="nav-link text-body border-bottom w-50" href="{{ route('beachcombing') }}">●ビーチコーミング</a>
+                    <a class="nav-link text-body border-bottom w-50" href="https://weather.yahoo.co.jp/weather/" rel="nofollow">●天候情報 (外部link)</a>
+                    <a class="nav-link text-body border-bottom w-50" href="https://sio.mieyell.jp/select?po=84004" rel="nofollow">●潮情報 (外部link)</a>
+                    </strong>
+                </ul>
+                
+                
+                
+                
+                <div class="col-md-10 mx-auto text-center">
+                       <strong><h4>～近況情報～</h4></strong>
+                </div>
+                
+               
+                
+            　　
+       <div class="container">
        <hr color="#c0c0c0">
        @if (!is_null($headline))
           <div class="row">
@@ -56,5 +87,6 @@
             </div>
         </div>
    </div>
-   </div>
-@endsection   
+   
+@endsection           
+

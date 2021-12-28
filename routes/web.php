@@ -11,37 +11,25 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//      return view('welcome');
+//  });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
-    Route::get('seanews/create', 'Admin\SeanewsController@add');
+    Route::get('seanews/create', 'Admin\SeanewsController@add')->name('Newseanews');
     Route::post('seanews/create', 'Admin\SeanewsController@create');
-    Route::get('seanews', 'Admin\SeanewsController@index');
+    Route::get('seanews', 'Admin\SeanewsController@index')->name('Newindex');
     Route::get('seanews/edit', 'Admin\SeanewsController@edit');
     Route::post('seanews/edit', 'Admin\SeanewsController@update');
     Route::get('seanews/delete', 'Admin\SeanewsController@delete');
 });
 
-
-    Route::get('/', 'SeanewsController@index');
-
-
-
-
-
-
-
-
+Route::get('/', 'SeanewsController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
+Route::get('/beachcombing', 'HomeController@beachcombing')->name('beachcombing');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/shoreplay', 'HomeController@shoreplay')->name('shoreplay');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

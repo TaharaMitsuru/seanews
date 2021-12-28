@@ -1,5 +1,10 @@
 body {
   color: #000;
+  background-image: url(../img/sea-g3d1a25bae_1920.jpg);  
+  background-position: center center; 
+  background-repeat: no-repeat;  
+  background-attachment: fixed; 
+  background-size: cover;
 }
 
 .header .logo {
