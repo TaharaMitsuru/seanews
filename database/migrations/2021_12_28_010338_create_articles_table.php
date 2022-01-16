@@ -15,10 +15,11 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
+            $table->integer('user_id')->nullable();
+            $table->string('title');
             $table->string('body');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
+            $table->string('image_path')->nullable();
+            $table->timestamps();
         });
     }
 

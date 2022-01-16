@@ -1,5 +1,5 @@
 {{-- layouts/admin.blade.phpを読み込む --}}
-@extends('layouts.admin')
+@extends('layouts.article')
 
 {{-- admin.blade.phpの@yield('title')に'ニュースの新規作成'を埋め込む --}}
 @section('title', '掲示板投稿フォーム')
@@ -9,11 +9,10 @@
 {{-- admin.blade.phpの@yield('content')に以下のタグに埋め込む --}}
 @section('content')
    <div class="container">
-       <body style="background-color:#7B68EE;">
        <div class="row">
            <div class="col-md-8 mx-auto">
                  <h2>海で遊ぼう</h2>
-                 <form action="{{ action('Admin\SeanewsController@create') }}" method="post" enctype="multipart/form-data">
+                 <form action="{{ action('Admin\ArticleController@create') }}" method="post" enctype="multipart/form-data">
                      
                     @if (count($errors) > 0)
                        <ul>

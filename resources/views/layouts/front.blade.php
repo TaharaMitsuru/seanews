@@ -50,10 +50,15 @@
                             {{-- ログインしていなければ、ログイン画面のリンクを表示する --}}
                             @guest
                                 <li><a class="nav-link" href="{{ route('login') }}">{{ __('messages.Login') }}</a></li>
+                                @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('会員登録') }}</a>
+                                </li>
+                            @endif
                             {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
                             @else
                                 <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle h1" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expended="false" v-pre>
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle h3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expended="false" v-pre>
                                         {{ Auth::user()->name }} <span class="caret"></span>
                                     </a>
                                     

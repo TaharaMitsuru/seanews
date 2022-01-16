@@ -16,16 +16,21 @@
 //  });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
-    Route::get('seanews/create', 'Admin\SeanewsController@add')->name('Newseanews');
-    Route::post('seanews/create', 'Admin\SeanewsController@create');
-    Route::get('seanews', 'Admin\SeanewsController@index')->name('Newindex');
-    Route::get('seanews/edit', 'Admin\SeanewsController@edit');
-    Route::post('seanews/edit', 'Admin\SeanewsController@update');
-    Route::get('seanews/delete', 'Admin\SeanewsController@delete');
+    Route::get('article/create', 'Admin\ArticleController@add')->name('Newarticle');
+    Route::post('article/create', 'Admin\ArticleController@create');
+    Route::get('article', 'Admin\ArticleController@index')->name('Newindex');
+    Route::get('article/edit', 'Admin\ArticleController@edit');
+    Route::post('article/edit', 'Admin\ArticleController@update');
+    Route::get('article/delete', 'Admin\ArticleController@delete');
+    Route::get('article/index', 'Admin\CommentController@add');
+    Route::post('article/comment', 'Admin\CommentController@create');
 });
 
-Route::get('/', 'SeanewsController@index');
+
+Route::get('/', 'ArticleController@index');
 Auth::routes();
+
+Route::resource('comment', 'CommentController', ['only' => ['']]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 

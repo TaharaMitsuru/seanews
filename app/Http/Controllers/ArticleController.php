@@ -4,13 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\HTML;
-use App\Seanews;
+use App\Article;
 
-class SeanewsController extends Controller
+class ArticleController extends Controller
 {
     public function index(Request $request)
     {
-        $posts = Seanews::all()->sortByDesc('updated_at');
+        $posts = Article::all()->sortByDesc('updated_at');
         
         if (count($posts) > 0) {
             $headline = $posts->shift();
@@ -18,8 +18,8 @@ class SeanewsController extends Controller
             $headline = null;
         }
         
-        // seanews/index.blade.phpにファイルを渡している。
+        // article/index.blade.phpにファイルを渡している。
         // また、VIEWテンプレートにheadline,post,という変数を渡している。
-        return view('seanews.index', ['headline' => $headline, 'posts' => $posts]);
+        return view('article.index', ['headline' => $headline, 'posts' => $posts]);
     }
 }
