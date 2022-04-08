@@ -51,7 +51,7 @@
                                 <td> 
                                    <div class="image col-md-6 mt-4 form-control-auto">
                                         @if ($article->image_path) {{-- image_passはArticleModelのarticle.tableのカラムに設定している.その上でarticlecontrollerのindexactionでpostsに代入されている --}}
-                                          <img src="{{ asset('storage/image/' . $article->image_path) }}" class="sample">
+                                          <img src="{{ $article->image_path }}" class="sample">
                                         @endif    {{-- foreachの中にif文のsrc=assetを使うことにより、1つのスレッドに対しての配列で使う事が出来るようになる --}}
                                   
                                    </div> 
