@@ -59,17 +59,25 @@
                     
                     @foreach($article->comments as $comment)
                        
+                <b><table class="table table-striped">
+                        <thead>
+                            <tr>
+                               <th scope="col">タイトル</th>     
+                               <th scope="col">コメント</th>
+                               <th scope="col">{{ $comment->updated_at->format('投稿日 . Y年m月d日') }}</th>
+                            </tr>
+                        </thead>
+                    </table>    
+                </b>
+                
+                
+                
                 <table class="table table-dark table-striped">
                     <thead>
-                       <tr>
+                       <tr class="small">
                          <th scope="col">{{ $comment->title }}</th>
                          <th scope="col">{{ $comment->body }}</th>
                        </tr>
-                       
-                       <b><p class="text-right">{{ $comment->updated_at->format('投稿日 . Y年m月d日') }}</p></b>
-                       <b><div class="row col-md">タイトル
-                       <div class="mgr-10">コメント</div>
-                       </div></b>
                     </thead>
                 </table>
                             

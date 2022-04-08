@@ -49,30 +49,30 @@
 <br>
 <br>
 <br>
-<strong><dl class="row">
-  <dt class="col-sm-3">服装</dt>
+<strong><h5><dl class="row text-dark bg-white rounded">
+  <dt class="col-sm-3">●服装</dt>
   <dd class="col-sm-9">濡れても良く、全身を覆う動きやすい服装が望ましいです。靴に関しても、岩場を歩く際は滑る可能性があるので、滑り止めがついた動きやすい靴を準備しておく必要があります。</dd>
 
-  <dt class="col-sm-3">持ち物</dt>
+  <dt class="col-sm-3">●持ち物</dt>
   <dd class="col-sm-9">
     <p>基本(飲料、網、生物を観察できるような透明な容器)</p>
     <p>他(手袋、持ち運べる小さなポンプ等)</p>
   </dd>
 
-  <dt class="col-sm-3">持ち物</dt>
+  <dt class="col-sm-3">●持ち物</dt>
   <dd class="col-sm-9">
     <p>基本(飲料、網、生物を観察できるような透明な容器)</p>
     <p>他(手袋、持ち運べる小さなポンプ等)</p>
   </dd>
 
-  <dt class="col-sm-3">磯遊びのスポット　福岡県</dt>
+  <dt class="col-sm-3">●磯遊びのスポット　福岡県</dt>
   <dd class="col-sm-9">
     <p>福岡県福岡県福津市渡　☆恋の浦海岸☆　 <br>
        (ここは、ビーチコーミングもできますが、遠浅なので、磯遊びも十分楽しめます。)</p>
     <p>志賀島　☆港付近☆　　　<br>
        (志賀島は、ビーチコーミングもできます。加えて磯遊びもできますので車で行くのであれば、駐車しやすい場所を選びましょう。)</p>
-  </dd></strong>
+  </dd>
 
-</dl>
+</dl></strong></h5>
 
 @endsection

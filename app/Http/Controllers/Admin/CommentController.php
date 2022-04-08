@@ -46,9 +46,9 @@ class CommentController extends Controller
     }
  public function index(Request $request)
    {
-  $article = Article::find($request->id);
+  $article = Article::find($request->id);//クラスメソッド
     //commnetのブレードの方にarticle_idの値を渡している
-    return view('admin.article.comment', ['article' => $article]);
+    return view('admin.article.comment', ['article' => $article]);//インスタンス変数article
    }
    
 }

@@ -29,7 +29,7 @@
                 
                 <div class="col-md-10 mx-auto text-center">
                     <font color="#404000">
-                       <strong><h3><b>～近況情報～</b></h3></strong>
+                       <strong><h3><b>～福岡近況情報～</b></h3></strong>
                     </font>   
                 </div>
                 
