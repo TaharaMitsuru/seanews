@@ -27,7 +27,7 @@
     </head>
     <body>
         <div class="d-grid gap-2 d-md-block">
-  <a class="btn btn-dark"  href="https://c81271d6bf5e4ca185dd7f0e18d6773e.vfs.cloud9.us-east-2.amazonaws.com/" type="button">トップページ</a>
+  <a class="btn btn-dark" href="{{ route('home') }}" type="button">トップページ</a>
 </div>
          <main class="p-4">
                 {{-- コンテンツをここに入れるために、＠yieldで空けておく。 --}}
