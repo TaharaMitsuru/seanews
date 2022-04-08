@@ -11,7 +11,7 @@
    <div class="container">
        <div class="row">
            <div class="col-md-8 mx-auto">
-                 <h2>海で遊ぼう</h2>
+                 <h2>海で遊ぼう</h2><h5>携帯画像は投稿の際、「小」を選択してください。</h5>
                  <form action="{{ action('Admin\ArticleController@create') }}" method="post" enctype="multipart/form-data">
                      
                     @if (count($errors) > 0)
