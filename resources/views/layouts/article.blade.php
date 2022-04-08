@@ -27,7 +27,7 @@
     </head>
     <body>
         <div class="d-grid gap-2 d-md-block">
-  <a class="btn btn-dark" href="{{ route('home') }}" type="button">トップページ</a>
+  <a class="btn btn-dark" href="{{ action('ArticleController@index') }}" type="button">トップページ</a>
 </div>
          <main class="p-4">
                 {{-- コンテンツをここに入れるために、＠yieldで空けておく。 --}}
