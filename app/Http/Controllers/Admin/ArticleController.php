@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Article;
 use App\History;
 use Carbon\Carbon;
+use Storage;
 class ArticleController extends Controller
 {
   public function add()
@@ -24,8 +25,8 @@ class ArticleController extends Controller
       
       // formに画像が送信されてきたら、保存して、$artical->image_pathに画像のパスを保存する。
       if (isset($form['image'])) {
-        $path = $request->file('image')->store('public/image');
-        $article->image_path = basename($path);
+        $path = Storage::disk('s3')->putFile('/',$form['image'],'public');
+        $article->image_path = Storage::disk('s3')->url($path);
       } else {
            $artical_form->image_path = null;
       }
@@ -75,8 +76,8 @@ class ArticleController extends Controller
      if ($request->remove == 'true') {
          $article_form['image_path'] = null;
      }elseif ($request->file('image')) {
-        $path = $request->file('image')->store('public/image');
-        $article_form['image_path'] = basename($path); 
+        $path = Storage::disk('s3')->putFile('/',$article_form['image'],'public');
+        $article->image_path = Storage::disk('s3')->url($path);
      }else {
         $article_form['image_path'] = $article->image_path; 
      }
