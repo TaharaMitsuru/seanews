@@ -25,7 +25,7 @@
                     
                     
                     <div class="form-group row">
-                        <label class="col-md-10"><h5><b>コメントタイトル</b></h5></label>
+                        <label class="col-md-4"><h5><b>コメントタイトル</b></h5></label><p class="text-danger"><b>必須入力</b></p>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                         </div>
@@ -34,7 +34,7 @@
                     
                     
                    <div class="form-group row">
-                        <label class="col-md-10"><h4><b>～コメントフォーム～</b></h4></label>
+                        <label class="col-md-4"><h4><b>～コメントフォーム～</b></h4></label><p class="text-danger"><b>必須入力</b></p>
                        <div class="col-md-10">
                            <textarea class="form-control" name="body" rows="15" value="{{ old('body') }}"></textarea>
                         </div>

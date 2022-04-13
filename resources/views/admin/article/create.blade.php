@@ -22,21 +22,21 @@
                        </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2">タイトル</label>
+                        <label class="col-md-2">タイトル</label><p class="text-danger">必須入力</p>
                         <div class="col-md-10">
                             <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                         </div>
                     </div>
                     
                     <div class="form-group row">
-                        <label class="col-md-2">本文</label>
+                        <label class="col-md-2">本文</label><p class="text-danger">必須入力</p>
                         <div class="col-md-10">
                             <textarea class="form-control" name="body" rows="15">{{ old('body') }}</textarea>
                         </div>
                     </div>
                     
                     <div class="form-group row">
-                        <label class="col-md-2">画像</label>
+                        <label class="col-md-2">画像</label><p class="text-danger">必須選択</p>
                         <div class="col-md-10">
                             <input type="file" class="form-control-file" name="image">
                         </div>
