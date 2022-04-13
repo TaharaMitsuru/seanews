@@ -49,7 +49,8 @@
                            
                        </div>
                    </div>
-               </form>
+                </form>   
+               
                <strong><h4 class="fw-bold text-center" ><b>～コメント一覧～</b></h4></strong>
                <br>
                <br>
@@ -86,3 +87,4 @@
            </div>
        </div>
    </div>
+   @endsection
